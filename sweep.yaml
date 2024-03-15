@@ -1,4 +1,4 @@
-gha_enabled: True
+gha_enabled: False
 branch: main
 blocked_dirs: ["tests"]
 draft: False
