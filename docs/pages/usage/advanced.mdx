@@ -6,6 +6,18 @@
 
 To ensure that Sweep scans a file, mention the file name in your ticket. Sweep searches for relevant files at runtime, but specifying the file helps avoid missing important details.
 
+### Using the sweep-cli Command-Line Application
+
+The `sweep-cli` command-line application allows users to input issue text directly via the CLI. Upon execution, it provides a list of files that should be changed and a proposed execution plan. This makes it easier to integrate Sweep into various development workflows without the need for GitHub integration.
+
+#### Example Usage
+
+```bash
+sweep-cli "Change the way how sweep works"
+```
+
+This command will process the given issue text and output the files to be changed along with a proposed execution plan.
+
 ### Giving Sweep feedback
 
 If Sweep's plan isn't accurate, you can respond to Sweep in three places:
