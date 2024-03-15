@@ -20,8 +20,7 @@ rules:
 # This is the branch that Sweep will develop from and make pull requests to. Most people use 'main' or 'master' but some users also use 'dev' or 'staging'.
 branch: 'main'
 
-# By default Sweep will read the logs and outputs from your existing Github Actions. To disable this, set this to false.
-gha_enabled: True
+# Sweep operates locally and does not interact with GitHub Actions.
 
 # This is the description of your project. It will be used by sweep when creating PRs. You can tell Sweep what's unique about your project, what frameworks you use, or anything else you want.
 #
@@ -29,11 +28,9 @@ gha_enabled: True
 # description: sweepai/sweep is a python project. The main api endpoints are in sweepai/api.py. Write code that adheres to PEP8.
 description: ''
 
-# This sets whether to create pull requests as drafts. If this is set to True, then all pull requests will be created as drafts and GitHub Actions will not be triggered.
-draft: False
+# Sweep operates locally and does not create pull requests.
 
-# This is a list of directories that Sweep will not be able to edit. In our example, Sweep is unable to modify the .github folder as we do not want Sweep to modify our GitHub Actions.
-blocked_dirs: [".github/"]
+# Sweep operates locally and does not have restrictions on directories.
 ```
 
 </details>
@@ -81,13 +78,7 @@ Instead, say `"Update the README.md file whenever a new feature is added. Make s
 
 `"We use unit tests for our code. If we have "class.py", we should have "class_test.py" in the same directory."`
 
-### `gha_enabled`
-```yaml
-gha_enabled: True
-```
-Possible Values: True, False
-
-This setting determines whether or not to enable GitHub Actions. If this is set to `False`, then Sweep will not read the results of GitHub Actions.
+### This section has been removed as Sweep no longer interacts with GitHub Actions.
 
 ### `branch`
 ```yaml
@@ -101,13 +92,7 @@ blocked_dirs: [".github/", "other_dir"]
 ```
 This setting lists all of the directories that Sweep will not be able to edit. In our example, Sweep is unable to modify the `.github` folder as we do not want Sweep to modify our GitHub Actions.
 
-### `draft`
-```yaml
-draft: False
-```
-Possible Values: True, False
-
-This setting determines whether or not to create pull requests as drafts. If this is set to `True`, then all pull requests will be created as drafts and **GitHub Actions will not be triggered**.
+### This section has been removed as Sweep no longer creates pull requests.
 
 ### `description`
 ```yaml
